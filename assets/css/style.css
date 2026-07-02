@@ -20,12 +20,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+html, body {
+  height: 100%;
+}
 
 html{
   scroll-behavior: smooth;
 }
 
 body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
     background-color: var(--bg-primary);
     color: var(--text-primary);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -44,7 +50,12 @@ ul{
     list-style: none;
 }
 main {
+  flex: 1 0 auto;
   padding-top: 80px;
+}
+
+footer {
+  flex-shrink: 0;
 }
 #particulas {
   position: fixed;
